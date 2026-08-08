@@ -18,10 +18,10 @@ This app was built from the model artifacts you uploaded:
 | `imputer.pkl` (IterativeImputer / MICE) | ✅ Included |
 | `feature_names.pkl` | ✅ Included |
 | `threshold.pkl` (0.20) | ✅ Included |
-| `X_test.pkl` | ❌ Not provided |
-| `y_test.pkl` | ❌ Not provided |
-| `y_prob_test.pkl` | ❌ Not provided |
-| `shap_explainer.pkl` | ❌ Not provided (app builds one at runtime instead) |
+| `X_test.pkl` | ✅ provided |
+| `y_test.pkl` | ✅ provided |
+| `y_prob_test.pkl` | ✅ provided |
+| `shap_explainer.pkl` | ✅ provided (app builds one at runtime instead) |
 | Training notebook | ❌ Not provided |
 
 **Impact:**
