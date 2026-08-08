@@ -1,0 +1,14 @@
+# NOTE: scikit-learn is pinned to match the version used to pickle
+# imputer.pkl. Newer sklearn releases have changed internal attributes
+# on SimpleImputer/IterativeImputer that break unpickling across
+# versions (not just a warning -- it raises AttributeError). If you
+# re-export the model artifacts from a different sklearn version,
+# update this pin to match `pip show scikit-learn` in your notebook.
+streamlit>=1.36,<2.0
+pandas>=2.0
+numpy>=1.26,<2.0
+scikit-learn==1.6.1
+xgboost>=2.0
+shap>=0.45
+matplotlib>=3.8
+joblib>=1.3

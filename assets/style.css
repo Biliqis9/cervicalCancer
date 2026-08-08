@@ -1,0 +1,152 @@
+/* ------------------------------------------------------------------
+   Cervical Cancer Risk Predictor -- Medical Theme
+   Dark blue / teal / soft green / white, rounded cards, responsive.
+   ------------------------------------------------------------------ */
+
+:root {
+  --dark-blue: #0B2545;
+  --teal: #0F9B8E;
+  --soft-green: #4CAF7D;
+  --bg: #F4F8FB;
+  --card-bg: #FFFFFF;
+  --text: #1B2430;
+  --muted: #5B6B79;
+  --danger: #D64545;
+  --warning: #E3A92B;
+  --success: #2E9E5B;
+  --border: #E1E9EF;
+}
+
+/* App background */
+.stApp {
+  background: var(--bg);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--dark-blue) !important;
+  font-weight: 700 !important;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, var(--dark-blue) 0%, #123a63 100%);
+}
+section[data-testid="stSidebar"] * {
+  color: #EAF2F8 !important;
+}
+section[data-testid="stSidebar"] .stMarkdown p {
+  color: #C9D9E8 !important;
+}
+
+/* Generic card */
+.med-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(11, 37, 69, 0.06);
+  margin-bottom: 1.25rem;
+}
+
+.med-card h3 {
+  margin-top: 0;
+}
+
+/* Section header pill */
+.section-pill {
+  display: inline-block;
+  background: rgba(15, 155, 142, 0.12);
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Metric cards row */
+.metric-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(11, 37, 69, 0.05);
+}
+.metric-card .metric-value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--dark-blue);
+}
+.metric-card .metric-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Risk result banner */
+.risk-banner {
+  border-radius: 16px;
+  padding: 1.75rem;
+  color: white;
+  margin-bottom: 1.25rem;
+}
+.risk-banner.green { background: linear-gradient(135deg, #2E9E5B, #4CAF7D); }
+.risk-banner.yellow { background: linear-gradient(135deg, #C98A12, #E3A92B); }
+.risk-banner.red { background: linear-gradient(135deg, #A62E2E, #D64545); }
+
+.risk-banner .risk-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.risk-banner .risk-sub {
+  font-size: 1rem;
+  opacity: 0.92;
+}
+
+/* Buttons */
+div.stButton > button, div.stFormSubmitButton > button {
+  background: var(--teal);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  transition: transform 0.05s ease-in-out, background 0.15s;
+}
+div.stButton > button:hover, div.stFormSubmitButton > button:hover {
+  background: var(--dark-blue);
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 1.5rem 0 0.5rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+.badge.green { background: var(--success); }
+.badge.yellow { background: var(--warning); }
+.badge.red { background: var(--danger); }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .med-card { padding: 1rem; }
+  .risk-banner .risk-title { font-size: 1.2rem; }
+}
